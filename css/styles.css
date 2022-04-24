@@ -1,0 +1,329 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 0.75fr 0.75fr 0.35fr;
+  grid-template-columns: 1fr;
+  min-width: 0;
+  min-height: 0;
+}
+
+.home {
+  grid-area: 1/ 1 / 2/ 3;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.about {
+  grid-area: 2/ 1 / 2/ 4;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.gallery {
+  grid-area: 3/ 1 / 4/ 2;
+  position: relative;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+.footer {
+  grid-area: 4/ 1 / 5/ 2;
+  position: relative;
+  overflow: hidden;
+  background-color: #393e46;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 250px;
+}
+
+.nav-bar h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #393e46;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav a {
+  color: #393e46;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+.nav a:hover {
+  color: #25282e;
+}
+
+.home-info {
+  padding: 9rem 4rem;
+}
+
+.home h1 {
+  font-size: 4rem;
+  width: 38%;
+  color: #393e46;
+}
+
+.home p {
+  font-size: 1.5rem;
+  width: 30%;
+  font-weight: 100;
+  color: #393e46;
+}
+
+.home-btn {
+  background-color: #393e46;
+  color: white;
+  margin-top: 200px;
+  padding: 16px 32px;
+  border-radius: 999px;
+}
+
+.home-btn:hover {
+  background-color: #25282e;
+}
+
+.about h4 {
+  font-size: 1.5rem;
+}
+
+.about h1 {
+  font-size: 4rem;
+  width: 60%;
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: center;
+  width: 70%;
+}
+
+#home-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+#about-img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+.gallery img:hover {
+  filter: grayscale(0);
+}
+
+.image1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image2 {
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 1;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.image2 img {
+  object-position: 0 -100px;
+}
+
+.image3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image4 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 2;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.image4 img {
+  object-position: -30px;
+}
+
+.image5 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image6 {
+  grid-column: 4 / span 1;
+  grid-row: 3 / span 1;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image7 {
+  grid-column: 5 / span 2;
+  grid-row: 1 / span 1;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image7 img {
+  object-position: 0 -100px;
+}
+
+.image8 {
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 2;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.image8 img {
+  object-position: 0 -40px;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  line-height: 32px;
+}
+
+.footer h2 {
+  font-size: 3rem;
+  width: 20%;
+}
+
+.footer h3 {
+  font-size: 1.3rem;
+}
+
+.footer a {
+  color: #919caf;
+}
+
+.footer a:hover {
+  color: #25282e;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.subscribe {
+  width: 20%;
+}
+
+#subscribe-input {
+  flex-direction: row;
+}
+
+#email-input {
+  padding: 10px;
+  margin-top: 16px;
+  width: 60%;
+}
+
+#subscribe-btn {
+  width: 30%;
+  margin-top: 16px;
+  margin-left: 1px;
+  padding: 0px;
+  background-color: #919caf;
+  color: white;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+}
+
+#subscribe-btn:hover {
+  background-color: #25282e;
+  color: #919caf;
+}
